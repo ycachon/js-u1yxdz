@@ -1,0 +1,130 @@
+<div id="app"></div>
+
+<body>
+
+<h1>  Introducción </h1>
+
+	A lo largo de estos últimos años, ha sido de especial relevancia por la larga crisis que los países están padeciendo desde el 2008 (crisis financiera que sigue patente y la última crisis a raíz de la pandemia del coronavirus COVID-19) un debate sobre el aumento de la factura de la luz y la repercusión de éste sobre el poder adquisitivo de las familias a lo largo de estos años.  No son pocas las noticias que se hacen eco sobre la pobreza energética de familias que no pueden hacer frente a la factura de la luz, así como, por otro lado, los debates sobre si la factura de la luz está aumentando artificialmente los beneficios de las eléctricas.
+<p>
+  
+	El presente estudio tiene por objetivo ver la relación entre la variación de la factura de la luz en distintos países europeos (entre ellos España) respecto a los precios y los salarios. Para hacer el estudio sobre este tema de candente actualidad, se han consultado las siguientes fuentes de datos oficiales (Eurostat, OCDE y el Banco Mundial):
+<p>
+    • Histórico precio de la electricidad por países (EUR) (fuente Eurostat):
+<p>https://ec.europa.eu/eurostat/databrowser/view/ten00117/default/table?lang=en
+<p>    • Histórico subida salarios (fuente OCDE):
+<p>https://stats.oecd.org/index.aspx?DataSetCode=RMW (USD)
+<p>    • Histórico ingresos medios (fuente OCDE):
+<p>https://stats.oecd.org/index.aspx?DataSetCode=RMW
+<p>    • Histórico datos inflación (fuente Banco Mundial):
+https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?end=2020&start=2009
+
+<p>
+
+	Para ver si el aumento del recibo de la luz está empobreciendo a las familias, se va a calcular, para el periodo 2009-2020, la variación de kWh en cada uno de los países tomando un tamaño mínimo de casa promedio (Medium size households), así como el incremento del salario mínimo en cada uno de los casos. Como lo que se van a comparar son incrementos, no se tendrá en cuenta el cambio monetario de Euro a Dólar. Con ello, lo que se consigue es comparar la variación de kWh respecto al incremento por año en cada uno de los países para ver si el aumento de recibo de la luz es mayor que el salario mínimo, lo que daría a entender que el aumento de la luz está empobreciendo a las familias.
+<p>
+	A partir de los datos de electricidad, se calcula la tasa de variación de precios de la electricidad por distintos países, así como la tasa de incremento del salario mínimo para cada uno de los países.
+<p>
+	No obstante, como se tienen los datos de salario desde el 2001, y de la electricidad a partir del 2010, para hacer la comparación se va a considerar el período 2010-2020. Por otro lado, como se quieren comparar tendencias, se considerarán gráficos lineales con diferentes categorías. 
+<p>
+  A partir de los datos obtenidos de las distintas fuentes se obtienen las gráficas de variación para varios países en cuanto a la variación de los precios y de los salarios mínimo y medio. Como primer gráfico se ha empleado la herramienta Tableau, donde se muestra la comparativa de la variación de los precios de la electricidad respecto a la variación de los precios para un conjunto de países. Posteriormente se centraran en distintos países para hacer una comparativa más individualizada:
+<p>
+
+<a href="https://ibb.co/xMd8L5M"><img src="https://i.ibb.co/y87BPs8/Dashboard.png" alt="Dashboard" border="0"></a>
+
+<p>
+Puesto que responder a la pregunta sobre si el recibo de la luz está empobreciendo a las familias es complicado de responder a la vista del gráfico anterior, se procederá a hacer un análisis por países, comparando la variación de precios respecto a los salarios. Si bien no se tienen datos completos para algunos países, se puede hacer un estudio para algunos de ellos. Para ello, se va a considerar también el salario mínimo.
+<p>
+
+Se toman varios países para hacer la comparativa, considerando la variación temporal de la tasa de precios, el salario mínimo y el salario medio:
+<p>
+1) España
+<p>
+<a href="https://ibb.co/2KHJ2h0"><img src="https://i.ibb.co/4N3kytw/Dashboard-Spain.png" alt="Dashboard-Spain" border="0"></a>
+<p>
+
+Como se puede apreciar, entre los años 2010 y 2015, la tasa de incremento de los precios de la electricidad ha estado en torno al 0 y 10%, mientras que la tasa de incremento de salario entre esos años ha sido negativa. Así pues, en el caso de España, el incremento de la tasa de los precios de electricidad ha empobrecido a las familias, puesto que la tasa ha sido mucho mayor en el caso de la electricidad que en el caso de los salarios, tanto del salario mínimo como del medio.
+<p>
+2) Francia
+<p>
+<a href="https://ibb.co/mCNgpZ6"><img src="https://i.ibb.co/99ZSPKs/Dashboard-France.png" alt="Dashboard-France" border="0"></a>
+<p>
+En este caso, se observa que la tasa de precios está aumentando en torno a un 10%, mientras que el salario mínimo se mantiene constante. Por otro lado, el salario medio ha bajado considerablemente en 2020. Por ello, puesto que la tasa de precios es bastante superior a la de la evolución del salario mínimo y medio, en el caso de Francia se puede afirmar que el recibo de la luz está empobreciendo a las familias.
+<p>
+En un mismo gráfico se muestran la tasa de variación de precios respecto a los salarios, mediante una gráfica de líneas superpuestas con barras, donde se muestra la variación de los precios y la de los salarios a lo largo del período 2010-2020. Mediante la librería Seaborn de Python se muestra la variación de los salarios y precios para España y Francia, así como la media de los países europeos:
+<p>
+
+<a href="https://ibb.co/zNvzf0j"><img src="https://i.ibb.co/hCzS8th/python-espa-a.png" alt="python-espa-a" border="0"></a>
+
+<p>
+
+<a href="https://ibb.co/ZVb7gQw"><img src="https://i.ibb.co/7X0Lp3T/python-francia.png" alt="python-francia" border="0"></a>
+
+<p>
+<a href="https://ibb.co/FXsXJCP"><img src="https://i.ibb.co/Qk8knt5/python-media-europeos.png" alt="python-media-europeos" border="0"></a>
+
+<p>
+
+Así, considerando la media de los países europeos, la evolución de los precios ha sido muy superior a la de los salarios durante los años 2010 a 2013, por lo que, considerando a nivel europeo, la factura de la luz ha empobrecido a las familias en ese período, aunque la situación ha cambiado desde el 2014, donde la subida de los salarios ha sido superior a la de los precios. Así, considerando el período posterior a 2016, el recibo de la luz no ha ido empobreciendo a las familias de forma directa.
+<p>
+Ahora bien, a la cuestión de si la factura de la luz ha ido empobreciendo a las familias, también habría que considerar la variación la inflación.  Para ello, se va estudiar si hay una relación entre el aumento de la factura de la luz y el incremento de la inflación. 
+<p>
+Tomando el caso de España, se muestra mediante un gráfico de líneas la evolución temporal de los salarios respecto a la inflación y los preciso de la electricidad:
+<p>
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/qmgCMwt/python-inflacion-salarios-electricidad-espa-a.png" alt="python-inflacion-salarios-electricidad-espa-a" border="0"></a>
+
+<p>
+
+Como se puede observar, en los años donde el aumento de los precios de la electricidad ha sido más pronunciado, como son el 2011,2013,2017, la inflación ha ido aumentando del mismo modo. Por otro lado, es de destacar que los precios de los salarios han disminuido durante todo el período, con la excepción del 2015. Así, a la vista del gráfico se puede observar que el aumento de los precios de la electricidad han sido mucho mayores que los de los salarios, por lo que, en España el aumento del recibo de la luz está empobreciendo a las familias, más teniendo en cuenta que hay una relación entre la variación de los precios de la luz y la inflación.
+
+<p>
+
+Para ver si hay efectivamente una relación directa entre el precio de la luz y la inflación, se puede estudiar la evolución temporal del precio de la electricidad con el de la inflación. Tal y como se comentó en el párrafo anterior, la inflación ha aumentado del mismo modo que los precios de la electricidad, lo que da a pensar que sí que están directamente relacionados. El siguiente gráfico muestra la densidad de relación entre los precios de la electricidad con la inflación:
+
+<p>
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/jb2YqRL/relaci-n-densidad-electricidad-inflaci-n-espa-a.png" alt="relaci-n-densidad-electricidad-inflaci-n-espa-a" border="0"></a>
+
+<p>
+Como se puede observar, hay una relación directa entre la inflación y los precios de la electricidad ya que, a mayor aumento de precios de la electricidad, mayor inflación. Es de destacar la zona de mayor correlación donde, inclus  con tasas negativas de precios de la electricidad, la inflación sigue siendo positiva.
+<p>
+
+De modo similar se muestra la relación entre el aumento de salarios y la inflación, donde la relación es la opuesta a la vista anteriormente:
+<p>
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/K5TLx2J/relaci-n-densidad-salarios-inflaci-n-espa-a.png" alt="relaci-n-densidad-salarios-inflaci-n-espa-a" border="0"></a>
+
+<p>
+
+Así, la zona más densa se encuentra en una tasa positiva de inflación junto con una disminución de los salarios, por lo que se puede concluir que, a mayor inflación, menor tasa de salarios y, por tanto, mayor empobrecimiento de las familias.
+
+<p>
+Por otro lado, en el anterior gráfico se mostró que hay una relación directa entre la inflación y los precios de la electricidad, por lo que un aumento de los precios de la electricidad provoca un mayor empobrecimiento de las familias.
+
+<p>
+Tomando la media de los países europeos, se muestran los gráficos de densidad en ambos casos para ver si la situación es similar:
+<p>
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/HNCQW0S/relaci-n-densidad-electricidad-inflaci-n-europa.png" alt="relaci-n-densidad-electricidad-inflaci-n-europa" border="0"></a>
+
+<p>
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Zmrz98q/relaci-n-densidad-salarios-inflaci-n-europa.png" alt="relaci-n-densidad-salarios-inflaci-n-europa" border="0"></a>
+
+<p>
+
+En el caso de la inflación vs precios de la electricidad, no es tan pronunciado como en el de España, pero sigue un patrón similar. Así, se aprecia también una relación directa entre la inflación y los precios de la electricidad, por lo que un aumento de los precios de la electricidad provoca un mayor empobrecimiento de las familias, considerando la media de los países europeos.
+
+<p>
+
+Conclusión:
+
+<p>
+
+Herramientas empleadas:
+<p>
+    • <b>Python</b>: Generación de gráficas de gráfico de barras, de líneas y de densidad. El cuaderno de trabajo de Google Collab se encuentra en la URL https://colab.research.google.com/drive/1Hx8jNmdkruV9aGYDNvOx8QZ16jbTbkzo#scrollTo=8JA6AJQzrHBZ
+<p>
+    • <b>Tableau</b>: Gráficos lineales de evolución temporal de salario mínimo, salario medio y variación de los precios.
+ 
+</body>
